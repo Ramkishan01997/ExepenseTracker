@@ -7,6 +7,7 @@ export const ExpenseForm = ({
     handleAmount,
     handleSubmit,
     amount,charge,edit}) => {
+      // userRef added
   const inputRef=useRef(null)
   useEffect(()=>{
    inputRef.current.focus()
@@ -16,10 +17,10 @@ export const ExpenseForm = ({
      <div className="form-center">
      <div className="form-group">
      <label htmlFor="expense">Items Name</label>
-     <input   ref={inputRef}
+     
+     <input  ref={inputRef} 
      type="text"
-    
-     className="form-control"
+    className="form-control"
      id="charge"
      name="charge"
      value={charge}
