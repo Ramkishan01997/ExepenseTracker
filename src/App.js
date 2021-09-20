@@ -25,6 +25,7 @@ JSON.parse(localStorage.getItem("expenses")):[];
 
   useEffect(()=>{
     localStorage.setItem("expenses",JSON.stringify(expenses))
+    //inputRef.current.focus()
   },[expenses]);
 
 
@@ -45,6 +46,8 @@ const handleAlert = ({ type, text }) => {
 //
   const handleSubmit=e=>{
     e.preventDefault();
+    
+
 console.log(charge,amount)
 if(charge!=='' && amount>0){
 if(edit){

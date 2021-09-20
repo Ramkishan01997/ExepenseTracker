@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useRef,useEffect} from 'react'
 import { MdSend } from 'react-icons/md'
 
 
@@ -7,12 +7,18 @@ export const ExpenseForm = ({
     handleAmount,
     handleSubmit,
     amount,charge,edit}) => {
+  const inputRef=useRef(null)
+  useEffect(()=>{
+   inputRef.current.focus()
+  },[])
     return (
      <form  onSubmit={handleSubmit}>
      <div className="form-center">
      <div className="form-group">
      <label htmlFor="expense">Items Name</label>
-     <input type="text"
+     <input   ref={inputRef}
+     type="text"
+    
      className="form-control"
      id="charge"
      name="charge"
